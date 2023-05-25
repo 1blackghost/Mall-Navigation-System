@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div class="header">
+    <h1 style="font-size: 32px; margin-bottom: 20px;">Mall Navigation</h1>
+    <div class="input-container">
+      <input type="text" id="start" placeholder="Start Location">
+      <input type="text" id="destination" placeholder="Destination">
+      <div id="preview" class="preview-section">
+        <ul id="preview-list" class="preview-list"></ul>
+      </div>
+      <input type="submit" value="Submit" id="submitBtn">
+    </div>
+  </div>
+
+  <div class="header">
+    <h3 style="font-size: 24px; margin-bottom: 10px;">Floor 1</h3>
+    <img src="/static/1.png" alt="Floor 1" class="floor-image" id="floor1">
+    <h3 style="font-size: 24px; margin-bottom: 10px;">Floor 2</h3>
+    <img src="/static/2.png" alt="Floor 2" class="floor-image" id="floor2">
+    <h3 style="font-size: 24px; margin-bottom: 10px;">Floor 3</h3>
+    <img src="/static/3.png" alt="Floor 3" class="floor-image" id="floor3">
+  </div>
+
+  <div class="map">
+    <div class="marker start">
+      <div class="marker-text">Start</div>
+    </div>
+    <div class="marker destination">
+      <div class="marker-text">Destination</div>
+    </div>
+    <div class="marker up">
+      <div class="marker-arrow">&#9650;</div>
+      <div class="marker-text">UpperFloor</div>
+    </div>
+    <div class="marker up">
+      <div class="marker-arrow down">&#9660;</div>
+      <div class="marker-text">DownFloor</div>
+    </div>
+    <canvas id="pathCanvas"></canvas>
+  </div>
+
+  <div class="footer">
+    <p style="font-size: 14px;">&copy; 2023 Mall Navigation. All rights reserved.</p>
+  </div>
+  <script src="/static/script.js"></script>
+
+</body>
+</html>

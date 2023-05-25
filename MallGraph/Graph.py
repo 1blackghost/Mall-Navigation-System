@@ -1,36 +1,52 @@
-
 import networkx as nx
+from DBMS import datahandler
+import string
+import random
 
 class MallGraph:
     def __init__(self):
         self.graph = nx.Graph()
 
-    def add_location(self, x, y, z):
-        # Add a location node to the graph
-        self.graph.add_node((x, y, z))
+    def add_location(self, name, x, y, z):
+        self.graph.add_node(name, pos=(int(x), int(y), int(z)))
 
     def add_connection(self, node1, node2):
-        # Add a connection (edge) between two location nodes
         self.graph.add_edge(node1, node2)
 
     def find_shortest_path(self, start, destination):
-        # Find the shortest path between start and destination using Dijkstra's algorithm
-        shortest_path = nx.dijkstra_path(self.graph, start, destination)
+        shortest_path_nodes = nx.dijkstra_path(self.graph, start, destination)
+        shortest_path_coordinates = [tuple(self.graph.nodes[node]['pos']) for node in shortest_path_nodes]
+        return shortest_path_coordinates
+
+class MakeGraph:
+    def __init__(self):
+        self.data = datahandler.read_user()
+        self.mall = MallGraph()
+
+    def create_connections(self):
+        for i in self.data:
+            coordinates = eval(i[3])
+            self.mall.add_location(str(i[1]), coordinates[0], coordinates[1], coordinates[2])
+        self.mall.add_connection("Entrance Hall", "Mall Office")
+        self.mall.add_connection("Mall Office", "Data Center")
+        self.mall.add_connection("Data Center", "Stairs")
+        self.mall.add_connection("Stairs", "Floor 1 RestRoom")
+        self.mall.add_connection("Floor 1 RestRoom", "Data Center")
+
+    def find_path(self, start, destination):
+        shortest_path = self.mall.find_shortest_path(start, destination)
         return shortest_path
 
 
-''' 
-mall = MallGraph()
+def generate_random_string(length):
+    characters = string.ascii_letters + string.digits
+    generated_strings = set()
 
-mall.add_location(1, 2, 1)
-mall.add_location(3, 4, 2)
-mall.add_location(5, 6, 3)
+    while True:
+        random_string = ''.join(random.choice(characters) for _ in range(length))
+        if random_string not in generated_strings:
+            generated_strings.add(random_string)
+            return random_string
 
-mall.add_connection((1, 2, 1), (3, 4, 2))
-mall.add_connection((3, 4, 2), (5, 6, 3))
 
-start = (1, 2, 1)
-destination = (5, 6, 3)
-shortest_path = mall.find_shortest_path(start, destination)
-print("Shortest Path:", shortest_path)
-'''
+
