@@ -4,7 +4,7 @@ import os
 class Drawer:
     def draw_for_floor_1(self, filename, coordinates):
         # Load the image
-        image_path = "static/1.png"
+        image_path = "static/public/1.png"
         image = Image.open(image_path)
 
         # Create a draw object
