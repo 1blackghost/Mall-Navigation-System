@@ -18,6 +18,6 @@ def getPath():
 
 		return {"status":"ok",
 			"1":{"img":"/static/"+filename,"floor":"1"},
-			"2":{"img":"/static/"+filename,"floor":"2"},
-			"3":{"img":"/static/"+filename,"floor":"3"},
+			"2":{"img":"/static/"+"public/2.png","floor":"2"},
+			"3":{"img":"/static/"+"public/3.png","floor":"3"},
 			},200
