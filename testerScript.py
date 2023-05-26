@@ -19,9 +19,9 @@ def main():
     root.title("Image Viewer")
 
     # Load the image using Pillow
-    image = Image.open("static/1.png")
+    image = Image.open("static/public/3.png")
     # Resize the image if needed
-    image = image.resize((800, 600))
+    image = image.resize((539, 403))
 
     # Create a Tkinter label to display the image
     img_label = Label(root)

@@ -70,6 +70,76 @@ class MakeGraph:
         self.mall.add_connection("Coridoor 5", "Chicking")
         self.mall.add_connection("Coridoor 3", "Stairs")
 
+        #floor 2
+
+        self.mall.add_connection("Stairs Floor 2", "Stairs")
+        self.mall.add_connection("RestArea Floor 2", "Stairs Floor 2")
+        self.mall.add_connection("Mall Office Floor 2", "RestArea Floor 2")
+        self.mall.add_connection("RestArea Floor 2", "Gucci")
+        self.mall.add_connection("Stairs Floor 2", "Gucci")
+        self.mall.add_connection("Rollex", "Gucci")
+        self.mall.add_connection("Rollex", "Rado")
+        self.mall.add_connection("Rado", "Oris")
+        self.mall.add_connection("Corridor 6", "Oris")
+        self.mall.add_connection("Corridor 6", "Rollex")
+        self.mall.add_connection("Gucci", "Corridor 6")
+        self.mall.add_connection("Corridor 6", "Titan")
+        self.mall.add_connection("Corridor 6", "Titan")
+        self.mall.add_connection("Titan", "Fastrack")
+        #working till here
+        self.mall.add_connection("Fastrack", "Corridor 7")
+        self.mall.add_connection("RestArea Floor 2", "Corridor 7")
+        self.mall.add_connection("MI", "Corridor 7")
+        self.mall.add_connection("Corridor 7", "Mall Office Floor 2")
+        self.mall.add_connection("Corridor 8", "Corridor 7")
+        self.mall.add_connection("Corridor 8", "Floor 2 RestRoom")
+        self.mall.add_connection("Corridor 8", "Sony")
+        self.mall.add_connection("Corridor 8", "Corridor 9")
+        self.mall.add_connection("Corridor 9", "Sony")
+        self.mall.add_connection("Corridor 9", "Floor 2 RestRoom")
+        self.mall.add_connection("Corridor 9", "VGuard")
+        self.mall.add_connection("Corridor 9", "Corridor 10")
+        self.mall.add_connection("Corridor 10", "Fastrack")
+
+        self.mall.add_connection("Corridor 10", "MI")
+        self.mall.add_connection("Corridor 10", "Panasonic")
+        self.mall.add_connection("Corridor 7", "Corridor 10")
+        #working till here
+        self.mall.add_connection("Stairs Floor 2", "Stairs Floor 3")
+        self.mall.add_connection("Stairs Floor 3", "Puma")
+        self.mall.add_connection("Stairs Floor 3", "Louis Phillipie")
+        self.mall.add_connection("Stairs Floor 3", "Addidas")
+        self.mall.add_connection("Stairs Floor 3", "Trends")
+        self.mall.add_connection("Trends", "Puma")
+        self.mall.add_connection("Corridor 11", "Trends")
+        self.mall.add_connection("Corridor 11", "Puma")
+        self.mall.add_connection("Corridor 11", "Stairs Floor 3")
+        self.mall.add_connection("Corridor 11", "Jockey")
+        self.mall.add_connection("Corridor 12", "Bata")
+        self.mall.add_connection("Corridor 12", "US POLO")
+        self.mall.add_connection("Corridor 12", "Trends")
+        self.mall.add_connection("US POLO", "Trends")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
