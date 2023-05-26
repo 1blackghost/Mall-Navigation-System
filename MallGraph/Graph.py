@@ -123,36 +123,22 @@ class MakeGraph:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     def find_path(self, start, destination):
         shortest_path = self.mall.find_shortest_path(start, destination)
         return shortest_path
+    def calculate_average_time(self, start, destination, average_speed):
+        shortest_path = self.find_path(start, destination)
+        total_distance = 0
+        for i in range(len(shortest_path) - 1):
+            current_pos = shortest_path[i]
+            next_pos = shortest_path[i + 1]
+            distance = ((next_pos[0] - current_pos[0]) ** 2 +
+                        (next_pos[1] - current_pos[1]) ** 2 +
+                        (next_pos[2] - current_pos[2]) ** 2) ** 0.5
+            total_distance += distance
+
+        average_time = total_distance / average_speed
+        return average_time
 
 
 def generate_random_string(length):

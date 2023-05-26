@@ -118,3 +118,25 @@ def read_user(place=None) -> list:
     conn.close()
 
     return result
+
+
+def get_locations_by_category(category) -> list:
+    """
+    Retrieve locations based on category.
+
+    Args:
+        category: Category to filter the locations.
+
+    Returns:
+        list: Locations matching the specified category.
+    """
+    conn = sqlite3.connect('location.db')
+    c = conn.cursor()
+
+    c.execute("SELECT * FROM locations WHERE category = ?", (category,))
+    result = c.fetchall()
+
+    c.close()
+    conn.close()
+
+    return result
