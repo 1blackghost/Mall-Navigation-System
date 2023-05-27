@@ -1,116 +1,119 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/static/public/style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="/static/public/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/public/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/public/script.js"></script>
 </head>
+
 <body>
-<div class="navbar">
-  <img src="/static/public/logo.png" alt="Logo" class="logo">
-  <div class="navbar-links">
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#similar">Similar Places</a>
-    <a href="#contact">Contact</a>
-  </div>
-</div>
-<!-- Add a button for the hamburger menu -->
-<button class="hamburger-btn"></button>
-
-<!-- Add a navigation menu -->
-<nav class="menu">
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#similar">Similar Places</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-
-  <div class="header">
-    <br>
-
-    <br>
-    <div class="input-container">
-      <input type="text" id="start" placeholder="Start Location">
-      <input type="text" id="destination" placeholder="Destination">
-      <div id="preview" class="preview-section">
-        <ul id="preview-list" class="preview-list"></ul>
-      </div>
-      <input type="submit" value="Submit" id="submitBtn">
+    <div class="navbar">
+        <img src="/static/public/logo.png" alt="Logo" class="logo">
+        <div class="navbar-links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#similar">Similar Places</a>
+            <a href="#contact">Contact</a>
+        </div>
     </div>
-  </div>
-<div class="container">
-  <p class="centered-text">Reveal The Whole Map</p>
-  <label class="switch">
-    <input type="checkbox" id="toggleButton" onclick="toggleFloors()">
-    <span class="slider"></span>
-  </label>
-</div>
+    <!-- Add a button for the hamburger menu -->
+    <button class="hamburger-btn"></button>
 
-<div class="floor-buttons">
-  <button class="tab-button active" id="floor1Button">Floor 1</button>
-  <button class="tab-button" id="floor2Button">Floor 2</button>
-  <button class="tab-button" id="floor3Button">Floor 3</button>
-</div>
-
-<div class="map">
-
-  <img src="/static/public/1.png" alt="Floor 1" class="floor-image" id="floor1">
-  <img src="/static/public/2.png" alt="Floor 2" class="floor-image" id="floor2">
-  <img src="/static/public/3.png" alt="Floor 3" class="floor-image" id="floor3">
-    <div class="marker start">
-    <div class="marker-text">Start</div>
-  </div>
-  <div class="marker destination">
-    <div class="marker-text">Destination</div>
-  </div>
-  <div class="marker down">
-    <div class="marker-text">Intermediate Stops</div>
-  </div>
-  <div class="container2">
-  <p class="time-taken"></p>
-</div>
-</div>
+    <!-- Add a navigation menu -->
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#similar">Similar Places</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
 
-<div id="similar" style="display: none;">
-  <div class="similar-places-section">
-    <h2>Similar Places</h2>
-    <p>Explore these similar places with destination:</p>
-    <ul>
-      <li>Cinema Complex</li>
-    </ul>
-  </div>
-</div>
-<div class="about-section" id="about">
-  <h2>About</h2>
-  <p>Mall Navigation is a revolutionary system designed to enhance the shopping experience by providing seamless navigation within shopping malls. Our cutting-edge technology ensures that visitors can effortlessly find their way around, locate stores, and discover the best routes to their desired destinations. With real-time directions and interactive floor plans, Mall Navigation takes the stress out of mall navigation, whether you're a first-time visitor or a regular shopper. Our accurate mapping technology tracks your location and guides you through the mall using the shortest and most convenient routes. Additionally, our interactive floor plans offer a visual representation of each level, highlighting store locations, restrooms, escalators, elevators, and other amenities. With Mall Navigation, you can easily locate your favorite stores and facilities, ensuring a seamless and enjoyable shopping experience every time you visit the mall..</p>
-</div>
+    <div class="header">
+        <br>
+
+        <br>
+        <div class="input-container">
+            <input type="text" id="start" placeholder="Start Location">
+            <input type="text" id="destination" placeholder="Destination">
+            <div id="preview" class="preview-section">
+                <ul id="preview-list" class="preview-list"></ul>
+            </div>
+            <input type="submit" value="Find Route" id="submitBtn">
+        </div>
+    </div>
+    <div class="container">
+        <p class="centered-text">Reveal The Whole Map</p>
+        <label class="switch">
+            <input type="checkbox" id="toggleButton" onclick="toggleFloors()">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="floor-buttons">
+        <button class="tab-button active" id="floor1Button">Floor 1</button>
+        <button class="tab-button" id="floor2Button">Floor 2</button>
+        <button class="tab-button" id="floor3Button">Floor 3</button>
+    </div>
+
+    <div class="map">
+
+        <img src="/static/public/1.png" alt="Floor 1" class="floor-image" id="floor1">
+        <img src="/static/public/2.png" alt="Floor 2" class="floor-image" id="floor2">
+        <img src="/static/public/3.png" alt="Floor 3" class="floor-image" id="floor3">
+        <div class="marker start">
+            <div class="marker-text">Start</div>
+        </div>
+        <div class="marker destination">
+            <div class="marker-text">Destination</div>
+        </div>
+        <div class="marker down">
+            <div class="marker-text">Intermediate Stops</div>
+        </div>
+        <div class="container2">
+            <p class="time-taken" style="display: none;"></p>
+        </div>
+    </div>
 
 
-<div class="contact-section" id="contact">
-  <h2>Contact</h2>
-  <p>Have any questions or feedback? Fill out the form below and we'll get back to you.</p>
-  <br>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Your Name">
+    <div id="similar" style="display: none;">
+        <div class="similar-places-section">
+            <h2>Similar Places</h2>
+            <p>Explore these similar places with destination:</p>
+            <ul>
+                <li>Cinema Complex</li>
+            </ul>
+        </div>
+    </div>
+    <div class="about-section" id="about">
+        <h2>About</h2>
+        <p>Mall Navigation is a revolutionary system designed to enhance the shopping experience by providing seamless navigation within shopping malls. Our cutting-edge technology ensures that visitors can effortlessly find their way around, locate stores, and discover the best routes to their desired destinations. With real-time directions and interactive floor plans, Mall Navigation takes the stress out of mall navigation, whether you're a first-time visitor or a regular shopper. Our accurate mapping technology tracks your location and guides you through the mall using the shortest and most convenient routes. Additionally, our interactive floor plans offer a visual representation of each level, highlighting store locations, restrooms, escalators, elevators, and other amenities. With Mall Navigation, you can easily locate your favorite stores and facilities, ensuring a seamless and enjoyable shopping experience every time you visit the mall..</p>
+    </div>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Your Email">
 
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" placeholder="Your Message"></textarea>
+    <div class="contact-section" id="contact">
+        <h2>Contact</h2>
+        <p>Have any questions or feedback? Fill out the form below and we'll get back to you.</p>
+        <br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name">
 
-    <input type="submit" value="Submit">
-</div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email">
 
-<div class="footer">
-  <p>&copy; 2023 Mall Navigation. All rights reserved.</p>
-</div>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Your Message"></textarea>
+
+        <input type="submit" value="Submit">
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 Mall Navigation. All rights reserved.</p>
+    </div>
 
 </body>
+
 </html>

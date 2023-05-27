@@ -19,8 +19,8 @@ class Drawer:
         marker_color = "black"
         stair_color = "yellow"
         line_color = "blue"
-        line_width = 5
-        marker_radius = 5
+        line_width = 10
+        marker_radius = 10
 
         # Draw circles at start and end locations
         draw.ellipse(
