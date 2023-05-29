@@ -20,4 +20,4 @@ To install the required dependencies for the Mall Navigation System, follow thes
    ```bash
    python main.py
 ```
-7.Now the webiste will be accessible on[127.0.0.1:5000]("http://127.0.0.1:5000") on your browser
+7.Now the webiste will be accessible on [127.0.0.1:5000]("http://127.0.0.1:5000") on your browser
