@@ -18,7 +18,7 @@ class Drawer:
         intermediate_color = "white"
         marker_color = "black"
         stair_color = "yellow"
-        line_color = "blue"
+        line_color = "lightblue"
         line_width = 10
         marker_radius = 10
 

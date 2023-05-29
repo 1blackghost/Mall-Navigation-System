@@ -108,6 +108,8 @@ def getPath():
         similar=datahandler.get_locations_by_category(temp[0][2])
         average_speed = 150  # average speed in units per minute
         average_time = step1.calculate_average_time(start, destination, average_speed)
+        average_time = round(average_time, 2)  
+
         return {
             "status": "ok",
             "1": {"img": "/static/" + file_pool[0], "floor": "1"},
